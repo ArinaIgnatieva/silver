@@ -1,17 +1,20 @@
 array = []
 
-a = int(input("Введите размерность массива"))
+a = int(input("Введите размерность массива:"))
 
 for i in range (a):
-    i = float(input("Введите элемент массива"))
+    i = float(input("Введите элемент массива:"))
     array.append(i)
 
-max_el = max(array)
+max = array[0]
+index = None 
 
-print("Максимальный элемент массива:", max_el)
+for i in range(a):
+    if array[i] > max:
+        max = array[i]
+        index = i 
 
-next = array.index(max(array)) + 1
-
-array[next:] = (len(array) - next) * [0]
+for i in range(index + 1, a):
+    array[i] = 0
 
 print(array)
