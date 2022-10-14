@@ -18,7 +18,7 @@ for i in a:
     if i in b and i not in result:
         result.append(i)
 
-print(a)
-print(b)
+print("Первый массив:", a)
+print("Второй массив:", b)
 
 print("Общие элементы первого и второго массивов:", result)
